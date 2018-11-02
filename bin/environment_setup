@@ -1,0 +1,27 @@
+#!/bin/bash
+# #####
+#
+# Install any software and setup environment for use in development.
+#
+#
+# #####
+
+set -e
+
+
+## Go
+
+### build
+
+brew install zmq
+
+go get -u github.com/gopherdata/gophernotes
+mkdir -p ~/Library/Jupyter/kernels/gophernotes
+cp $GOPATH/src/github.com/gopherdata/gophernotes/kernel/* ~/Library/Jupyter/kernels/gophernotes
+
+go get -u github.com/kniren/gota/dataframe
+go get -u gonum.org/v1/plot
+go get -u gonum.org/v1/gonum
+go get -u github.com/sajari/regression
+
+echo "ml env setup complete"
