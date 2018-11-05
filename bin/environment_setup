@@ -20,8 +20,9 @@ mkdir -p ~/Library/Jupyter/kernels/gophernotes
 cp $GOPATH/src/github.com/gopherdata/gophernotes/kernel/* ~/Library/Jupyter/kernels/gophernotes
 
 go get -u github.com/kniren/gota/dataframe
-go get -u gonum.org/v1/plot
+go get -u gonum.org/v1/plot/...
 go get -u gonum.org/v1/gonum
 go get -u github.com/sajari/regression
+go get -u golang.org/x/text
 
 echo "ml env setup complete"
